@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Add Task') }}
+            {{ __('Add product') }}
         </h2>
     </x-slot>
 
@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-5">
 
-                <form method="POST" action="/task">
+                <form method="POST" action="/product">
 
                     <div class="form-group">
                         <textarea name="description" class="form-control"></textarea>
@@ -21,7 +21,7 @@
                     <div class="form-group">
                         <button type="submit"
                             class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add
-                            Task</button>
+                            product</button>
                     </div>
                     {{ csrf_field() }}
                 </form>
