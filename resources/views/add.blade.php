@@ -12,15 +12,15 @@
                 <form method="POST" action="/product">
 
                     <div class="form-group">
-                        <textarea name="description" class="form-control"></textarea>
-                        @if ($errors->has('description'))
-                            <span class="text-danger">{{ $errors->first('description') }}</span>
+                        <textarea name="name" class="form-control"></textarea>
+                        @if ($errors->has('name'))
+                            <span class="text-danger">{{ $errors->first('name') }}</span>
                         @endif
                     </div>
 
                     <div class="form-group">
                         <button type="submit"
-                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add
+                            class="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded">Add
                             product</button>
                     </div>
                     {{ csrf_field() }}

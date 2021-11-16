@@ -14,7 +14,7 @@ class MarketController extends Controller
      */
     public function index()
     {
-        //
+        return Product::all();
     }
 
     /**
@@ -102,6 +102,7 @@ class MarketController extends Controller
     }
     public function success()
     {
-        return view('success');
+        $products = Product::all();
+        return view('success', compact('products'));
     }
 }

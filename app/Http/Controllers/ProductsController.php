@@ -21,10 +21,11 @@ class ProductsController extends Controller
     public function create(Request $request)
     {
         $this->validate($request, [
-            'description' => 'required'
+            'name' => 'required'
         ]);
         $product = new Product();
-        $product->description = $request->description;
+        $product->name = $request->name;
+        $product->photo_url = 'img/produk/baju-' + random_int(1, 4) + '.jpg';
         $product->user_id = Auth::id();
         $product->save();
         return redirect('/dashboard');
@@ -44,14 +45,19 @@ class ProductsController extends Controller
     {
         if (isset($_POST['delete'])) {
             $product->delete();
-            return redirect('/');
+            return redirect('/dashboard');
         } else {
             $this->validate($request, [
-                'description' => 'required'
+                'name' => 'required'
             ]);
-            $product->description = $request->description;
+            $product->name = $request->name;
             $product->save();
-            return redirect('/');
+            return redirect('/dashboard');
         }
+    }
+
+    public function detail(Product $product)
+    {
+        return view('detail', compact('product'));
     }
 }

@@ -1,7 +1,9 @@
 <header>
     <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light py-4">
         <div class="container">
-            <a class="navbar-brand" href="#">IMAMDVSN</a>
+            <a class="navbar-brand" href="{{ route('home') }}"><img src="{{ asset('logo512.png') }}"
+                    style="border-radius: 100px" width="40px" height="40px" />
+                IMAMDVSN</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -9,7 +11,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Link</a>
@@ -54,14 +56,14 @@
                                     </button></a>
                             @else
                                 <a href="
-                                                                                            {{ route('login') }}"
+                                                                                                                        {{ route('login') }}"
                                     class=""><button class=" btn" type="submit">
                                     Log in
                                     </button></a>
 
                                 @if (Route::has('register'))
                                     <a href="
-                                                                                            {{ route('register') }}"
+                                                                                                                        {{ route('register') }}"
                                         class="ml-4"><button class="btn btn-outline-primary" type="submit">
                                             Register
                                         </button></a>

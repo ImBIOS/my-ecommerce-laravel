@@ -13,7 +13,7 @@
 
                     <div class="flex-auto text-right mt-2">
                         <a href="/product"
-                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add
+                            class="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded">Add
                             new product</a>
                     </div>
                 </div>
@@ -29,15 +29,15 @@
                         @foreach (auth()->user()->products as $product)
                             <tr class="border-b hover:bg-orange-100">
                                 <td class="p-3 px-5">
-                                    {{ $product->description }}
+                                    {{ $product->name }}
                                 </td>
                                 <td class="p-3 px-5">
 
                                     <a href="/product/{{ $product->id }}" name="edit"
-                                        class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Edit</a>
+                                        class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-black py-1 px-2 rounded focus:outline-none focus:shadow-outline">Edit</a>
                                     <form action="/product/{{ $product->id }}" class="inline-block">
                                         <button type="submit" name="delete" formmethod="POST"
-                                            class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Delete</button>
+                                            class="text-sm bg-red-500 hover:bg-red-700 text-black py-1 px-2 rounded focus:outline-none focus:shadow-outline">Delete</button>
                                         {{ csrf_field() }}
                                     </form>
                                 </td>

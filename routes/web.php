@@ -22,6 +22,7 @@ Route::get('/detail', [MarketController::class, 'detail'])->name('detail');
 Route::get('/keranjang', [MarketController::class, 'keranjang'])->name('keranjang');
 Route::get('/checkout', [MarketController::class, 'checkout'])->name('checkout');
 Route::get('/success', [MarketController::class, 'success'])->name('success');
+Route::get('/detail/{product}', [ProductsController::class, 'detail']);
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/dashboard', [ProductsController::class, 'index'])->name('dashboard');

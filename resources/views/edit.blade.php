@@ -12,9 +12,9 @@
                 <form method="POST" action="/product/{{ $product->id }}">
 
                     <div class="form-group">
-                        <textarea name="description" class="form-control">{{ $product->description }}</textarea>
-                        @if ($errors->has('description'))
-                            <span class="text-danger">{{ $errors->first('description') }}</span>
+                        <textarea name="name" class="form-control">{{ $product->name }}</textarea>
+                        @if ($errors->has('name'))
+                            <span class="text-danger">{{ $errors->first('name') }}</span>
                         @endif
                     </div>
 

@@ -70,7 +70,7 @@
     </div>
 
     <!-- Marketing messaging and featurettes
-                                                                                                                                          ================================================== -->
+                                                                                                                                                      ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <div class="container marketing py-4">
@@ -89,12 +89,11 @@
         <div class="d-flex flex-wrap">
             @foreach ($products as $product)
                 <div class="card col-3" width="400px">
-                    <img src="img/produk/baju-{{ random_int(1, 4) }}.jpg" class="card-img-top" width='100px'
-                        alt="baju-1-image" />
+                    <img src="{{ $product->photo_url }}" class="card-img-top" width='100px' alt="baju-1-image" />
                     <div class="card-body">
-                        <h5 class="card-title">{{ $product->description }}</h5>
+                        <h5 class="card-title">{{ $product->name }}</h5>
                         <p class="card-text">$430.99</p>
-                        <a href="{{ route('detail') }}" class="btn btn-primary">Detail</a>
+                        <a href="/detail/{{ $product->id }}" class="btn btn-primary">Detail</a>
                     </div>
                 </div>
             @endforeach

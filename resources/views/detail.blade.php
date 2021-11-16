@@ -10,21 +10,25 @@
                 <div class="col-md-6">
                     <div class="d-flex flex-column justify-content-center">
                         <div class="main_image">
-                            <img src="./img/produk/baju-1.jpg" id="main_product_image" width="350" />
+                            <img src="{{ asset($product->photo_url) }}" id="main_product_image" width="350" />
                         </div>
                         <div class="thumbnail_images">
                             <ul id="thumbnail">
                                 <li>
-                                    <img onclick="changeImage(this)" src="./img/produk/baju-1.jpg" width="70" />
+                                    <img onclick="changeImage(this)" src="{{ asset('img/produk/baju-1.jpg') }}"
+                                        width="70" />
                                 </li>
                                 <li>
-                                    <img onclick="changeImage(this)" src="./img/produk/baju-2.jpg" width="70" />
+                                    <img onclick="changeImage(this)" src="{{ asset('img/produk/baju-2.jpg') }}"
+                                        width="70" />
                                 </li>
                                 <li>
-                                    <img onclick="changeImage(this)" src="./img/produk/baju-3.jpg" width="70" />
+                                    <img onclick="changeImage(this)" src="{{ asset('img/produk/baju-3.jpg') }}"
+                                        width="70" />
                                 </li>
                                 <li>
-                                    <img onclick="changeImage(this)" src="./img/produk/baju-4.jpg" width="70" />
+                                    <img onclick="changeImage(this)" src="{{ asset('img/produk/baju-4.jpg') }}"
+                                        width="70" />
                                 </li>
                             </ul>
                         </div>
@@ -33,7 +37,7 @@
                 <div class="col-md-6">
                     <div class="p-3 right-side">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h3>Kaos Keren</h3>
+                            <h3>{{ $product->name }}</h3>
                         </div>
                         <div class="mt-2 pr-3 content">
                             <p>

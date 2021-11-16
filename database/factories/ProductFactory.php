@@ -21,8 +21,10 @@ class ProductFactory extends Factory
      */
     public function definition()
     {
+        $random_number = random_int(1, 4);
         return [
-            'description' => $this->faker->name(),
+            'name' => $this->faker->name(),
+            'photo_url' => "img/produk/baju-{$random_number}.jpg",
             'user_id' => '1',
         ];
     }
